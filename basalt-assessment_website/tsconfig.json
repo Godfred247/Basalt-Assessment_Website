@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "jsx": "react", // Specify the JSX mode (e.g., react)
+      "esModuleInterop": true // Optional, enables compatibility with ES modules
+    }
+  }
+  

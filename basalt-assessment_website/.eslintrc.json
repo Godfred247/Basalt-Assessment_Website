@@ -1,28 +1,54 @@
 {
-    "extends": [
-      "airbnb-typescript",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
-      "prettier",
-      "prettier/@typescript-eslint",
-      "prettier/react"
-    ],
-    "plugins": ["@typescript-eslint", "react", "prettier"],
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "rules": {
-      "prettier/prettier": "error",
-      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "import/prefer-default-export": "off"
-    },
-    "settings": {
-      "react": {
-        "pragma": "React",
-        "version": "detect"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "import"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
       }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
   }
-  
+}
